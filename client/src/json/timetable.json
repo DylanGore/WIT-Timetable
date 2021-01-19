@@ -1,5 +1,249 @@
 [
     {
+        "code": "HA",
+        "name": "HA - Applied Arts",
+        "courses": [
+            { "code": "HCURE_C_Y2", "name": " Year 2  (HCURE_C_Y2)" },
+            {
+                "code": "HAPSC_D_Y1",
+                "name": "BA in Applied Social Care Year 1  (HAPSC_D_Y1)"
+            },
+            {
+                "code": "HAPSC_D_Y2",
+                "name": "BA in Applied Social Care Year 2  (HAPSC_D_Y2)"
+            },
+            {
+                "code": "HAPSC_D_Y3",
+                "name": "BA in Applied Social Care Year 3  (HAPSC_D_Y3)"
+            },
+            {
+                "code": "GTHSO_B_Y1",
+                "name": "Bachelor of Arts (H) Theology and Society (BA) Year 1  (GTHSO_B_Y1)"
+            },
+            {
+                "code": "GTHSO_B_Y2",
+                "name": "Bachelor of Arts (H) Theology and Society (BA) Year 2  (GTHSO_B_Y2)"
+            },
+            {
+                "code": "GTHSO_B_Y3",
+                "name": "Bachelor of Arts (H) Theology and Society (BA) Year 3  (GTHSO_B_Y3)"
+            },
+            {
+                "code": "GTHSO_B_Y4",
+                "name": "Bachelor of Arts (H) Theology and Society (BA) Year 4  (GTHSO_B_Y4)"
+            },
+            {
+                "code": "HARTS_B_Y1",
+                "name": "Bachelor of Arts (H) Year 1  (HARTS_B_Y1)"
+            },
+            {
+                "code": "HARTS_B_Y2",
+                "name": "Bachelor of Arts (H) Year 2  (HARTS_B_Y2)"
+            },
+            {
+                "code": "HARTS_B_Y3",
+                "name": "Bachelor of Arts (H) Year 3  (HARTS_B_Y3)"
+            },
+            {
+                "code": "HSSSC_B_Y4",
+                "name": "Bachelor of Arts (H) in Applied Social Studies in Social Care Year 4  (HSSSC_B_Y4)"
+            },
+            {
+                "code": "HSSSC_B_Y4 _E1",
+                "name": "Bachelor of Arts (H) in Applied Social Studies in Social Care Year 4 _E1  (HSSSC_B_Y4 _E1)"
+            },
+            {
+                "code": "HCRJU_B_Y1",
+                "name": "Bachelor of Arts (H) in Criminal Justice Studies Year 1  (HCRJU_B_Y1)"
+            },
+            {
+                "code": "HCRJU_B_Y2",
+                "name": "Bachelor of Arts (H) in Criminal Justice Studies Year 2  (HCRJU_B_Y2)"
+            },
+            {
+                "code": "HCRJU_B_Y3",
+                "name": "Bachelor of Arts (H) in Criminal Justice Studies Year 3  (HCRJU_B_Y3)"
+            },
+            {
+                "code": "HECHS_B_Y1",
+                "name": "Bachelor of Arts (H) in Early Childhood Studies Year 1  (HECHS_B_Y1)"
+            },
+            {
+                "code": "HECHS_B_Y2",
+                "name": "Bachelor of Arts (H) in Early Childhood Studies Year 2  (HECHS_B_Y2)"
+            },
+            {
+                "code": "HECHS_B_Y3",
+                "name": "Bachelor of Arts (H) in Early Childhood Studies Year 3  (HECHS_B_Y3)"
+            },
+            {
+                "code": "HLEST_B_Y1",
+                "name": "Bachelor of Arts (H) in Legal Studies Year 1  (HLEST_B_Y1)"
+            },
+            {
+                "code": "HLEST_B_Y2",
+                "name": "Bachelor of Arts (H) in Legal Studies Year 2  (HLEST_B_Y2)"
+            },
+            {
+                "code": "HLEST_B_Y3",
+                "name": "Bachelor of Arts (H) in Legal Studies Year 3  (HLEST_B_Y3)"
+            },
+            {
+                "code": "HLEGB_B_Y4",
+                "name": "Bachelor of Arts (H) in Legal and Business Studies Year 4  (HLEGB_B_Y4)"
+            },
+            {
+                "code": "HPSYC_B_Y1",
+                "name": "Bachelor of Arts (H) in Psychology Year 1  (HPSYC_B_Y1)"
+            },
+            {
+                "code": "HPSYC_B_Y2",
+                "name": "Bachelor of Arts (H) in Psychology Year 2  (HPSYC_B_Y2)"
+            },
+            {
+                "code": "HPSYC_B_Y3",
+                "name": "Bachelor of Arts (H) in Psychology Year 3  (HPSYC_B_Y3)"
+            },
+            {
+                "code": "HSOCR_B_Y1",
+                "name": "Bachelor of Arts (H) in Social Care Practice Year 1  (HSOCR_B_Y1)"
+            },
+            {
+                "code": "HSOCR_B_Y2",
+                "name": "Bachelor of Arts (H) in Social Care Practice Year 2  (HSOCR_B_Y2)"
+            },
+            {
+                "code": "HSOCR_B_Y3",
+                "name": "Bachelor of Arts (H) in Social Care Practice Year 3  (HSOCR_B_Y3)"
+            },
+            {
+                "code": "HSOCR_B_Y4",
+                "name": "Bachelor of Arts (H) in Social Care Practice Year 4  (HSOCR_B_Y4)"
+            },
+            {
+                "code": "HSOSC_B_Y1",
+                "name": "Bachelor of Arts (H) in Social Science Year 1  (HSOSC_B_Y1)"
+            },
+            {
+                "code": "HSOSC_B_Y2",
+                "name": "Bachelor of Arts (H) in Social Science Year 2  (HSOSC_B_Y2)"
+            },
+            {
+                "code": "HSOSC_B_Y3",
+                "name": "Bachelor of Arts (H) in Social Science Year 3  (HSOSC_B_Y3)"
+            },
+            {
+                "code": "HSSSC_D_Y1",
+                "name": "Bachelor of Arts in Applied Social Studies in SocialCare Year 1  (HSSSC_D_Y1)"
+            },
+            {
+                "code": "HSSSC_D_Y2",
+                "name": "Bachelor of Arts in Applied Social Studies in SocialCare Year 2  (HSSSC_D_Y2)"
+            },
+            {
+                "code": "HSSSC_D_Y3",
+                "name": "Bachelor of Arts in Applied Social Studies in SocialCare Year 3  (HSSSC_D_Y3)"
+            },
+            {
+                "code": "HLEGL_D_Y3",
+                "name": "Bachelor of Arts in Legal Studies Year 3  (HLEGL_D_Y3)"
+            },
+            {
+                "code": "HINTR_D_Y3",
+                "name": "Bachelor of Arts in Legal Studies in Int Trade Year 3  (HINTR_D_Y3)"
+            },
+            {
+                "code": "AARTS_P_Y7",
+                "name": "Doctor of Philisophy in Arts  (AARTS_P_Y7)"
+            },
+            {
+                "code": "GARTS_P_Y6",
+                "name": "Doctor of Philosophy Year 6  (GARTS_P_Y6)"
+            },
+            {
+                "code": "HA Authorised Insititute Absence",
+                "name": "HA Authorised Insititute Absence  (HA Authorised Insititute Absence)"
+            },
+            {
+                "code": "HA Authorised Insititute Project",
+                "name": "HA Authorised Insititute Project  (HA Authorised Insititute Project)"
+            },
+            {
+                "code": "HA Funded Research Project",
+                "name": "HA Funded Research Project  (HA Funded Research Project)"
+            },
+            {
+                "code": "HA Work Placement Co-Ordination",
+                "name": "HA Work Placement Co-Ordination  (HA Work Placement Co-Ordination)"
+            },
+            {
+                "code": "HLEGA_C_Y1",
+                "name": "Higher Certificate in Arts in Legal Studies Year 1  (HLEGA_C_Y1)"
+            },
+            {
+                "code": "HLEGA_C_Y2",
+                "name": "Higher Certificate in Arts in Legal Studies Year 2  (HLEGA_C_Y2)"
+            },
+            {
+                "code": "HCURE_C_Y1",
+                "name": "Higher Certificate in Custodial Care Year 1  (HCURE_C_Y1)"
+            },
+            {
+                "code": "GARTS_M_Y6",
+                "name": "Master of Arts Applied Arts Year 6  (GARTS_M_Y6)"
+            },
+            {
+                "code": "HSPRT_R_Y5",
+                "name": "Master of Arts in Applied Spirituality Year 5  (HSPRT_R_Y5)"
+            },
+            {
+                "code": "HSOST_R_Y5",
+                "name": "Master of Arts in Social Studies Year 5  (HSOST_R_Y5)"
+            },
+            {
+                "code": "HSOST_R_Y6",
+                "name": "Master of Arts in Social Studies Year 6  (HSOST_R_Y6)"
+            },
+            {
+                "code": "HSOJU_R_Y5",
+                "name": "Masters in Social Justice Year 5  (HSOJU_R_Y5)"
+            },
+            {
+                "code": "HLAWH_G_Y5",
+                "name": "Postgraduate Diploma in Law Year 5  (HLAWH_G_Y5)"
+            },
+            {
+                "code": "HA PM Tasks",
+                "name": "Programme Management Tasks  (HA PM Tasks)"
+            },
+            { "code": "HA Research", "name": "Research  (HA Research)" },
+            { "code": "HA Tutoring", "name": "Tutoring  (HA Tutoring)" }
+        ]
+    },
+    {
+        "code": "ET",
+        "name": "ET - Trade Studies",
+        "courses": [
+            {
+                "code": "ECRSK_MA_Y1",
+                "name": "Certificate in Craft Transferable Skills (Special Purpose)  (ECRSK_MA_Y1)"
+            },
+            {
+                "code": "TEAGASC_Y1",
+                "name": "Dip. In Machinery & Arable Crops Year 1  (TEAGASC_Y1)"
+            },
+            {
+                "code": "ET Authourised Institute Project",
+                "name": "ET Authourised Institute Project  (ET Authourised Institute Project)"
+            },
+            {
+                "code": "ET PM Tasks",
+                "name": "Programme Management Tasks  (ET PM Tasks)"
+            },
+            { "code": "ET Research", "name": "Research  (ET Research)" }
+        ]
+    },
+    {
         "code": "BG",
         "name": "BG - Graduate Business",
         "courses": [
@@ -111,6 +355,251 @@
                 "code": "BENTX_G_ Y5",
                 "name": "PG Diploma in Business in Lean Enterprise Excellence  (BENTX_G_ Y5)"
             }
+        ]
+    },
+    {
+        "code": "EE",
+        "name": "EE - Engineering Technology",
+        "courses": [
+            { "code": "EONIC_B_Y1", "name": " Year 1  (EONIC_B_Y1)" },
+            { "code": "EONIC_B_Y2", "name": " Year 2  (EONIC_B_Y2)" },
+            {
+                "code": "ETRIC_B_Y1",
+                "name": "BEng ( H) in Electrical Engineering Year 1  (ETRIC_B_Y1)"
+            },
+            {
+                "code": "ETRIC_B_Y2",
+                "name": "BEng ( H) in Electrical Engineering Year 2  (ETRIC_B_Y2)"
+            },
+            {
+                "code": "ETRIC_B_Y3",
+                "name": "BEng ( H) in Electrical Engineering Year 3  (ETRIC_B_Y3)"
+            },
+            {
+                "code": "ETRIC_B_Y4",
+                "name": "BEng ( H) in Electrical Engineering Year 4  (ETRIC_B_Y4)"
+            },
+            {
+                "code": "EELEC_B_Y1",
+                "name": "Bachelor Of Science (Honours) in Applied Electronics Year 1  (EELEC_B_Y1)"
+            },
+            {
+                "code": "EELEC_B_Y2",
+                "name": "Bachelor Of Science (Honours) in Applied Electronics Year 2  (EELEC_B_Y2)"
+            },
+            {
+                "code": "EELEC_B_Y3",
+                "name": "Bachelor Of Science (Honours) in Applied Electronics Year 3  (EELEC_B_Y3)"
+            },
+            {
+                "code": "EELEC_B_Y4",
+                "name": "Bachelor Of Science (Honours) in Applied Electronics Year 4  (EELEC_B_Y4)"
+            },
+            {
+                "code": "EONIC_B_Y3",
+                "name": "Bachelor of Engineering (H) in Electronic Engineering  Year 3  (EONIC_B_Y3)"
+            },
+            {
+                "code": "EMSEN_B_Y1",
+                "name": "Bachelor of Engineering (H) in Mech & Manufacturing Eng Year 1  (EMSEN_B_Y1)"
+            },
+            {
+                "code": "EMSEN_B_Y2",
+                "name": "Bachelor of Engineering (H) in Mech & Manufacturing Eng Year 2  (EMSEN_B_Y2)"
+            },
+            {
+                "code": "EMSEN_B_Y3",
+                "name": "Bachelor of Engineering (H) in Mech & Manufacturing Eng Year 3  (EMSEN_B_Y3)"
+            },
+            {
+                "code": "EMSEN_B_Y4",
+                "name": "Bachelor of Engineering (H) in Mech & Manufacturing Eng Year 4  (EMSEN_B_Y4)"
+            },
+            {
+                "code": "EELCT_B_Y4",
+                "name": "Bachelor of Engineering (Honours) in Electrical Engineering Year 4  (EELCT_B_Y4)"
+            },
+            {
+                "code": "EELCT_B_Y5",
+                "name": "Bachelor of Engineering (Honours) in Electrical Engineering Year 5  (EELCT_B_Y5)"
+            },
+            {
+                "code": "EEELC_B_Y1",
+                "name": "Bachelor of Engineering (Honours) in Electronic (BEng) Year 1  (EEELC_B_Y1)"
+            },
+            {
+                "code": "EEELC_B_Y2",
+                "name": "Bachelor of Engineering (Honours) in Electronic (BEng) Year 2  (EEELC_B_Y2)"
+            },
+            {
+                "code": "EEELC_B_Y3",
+                "name": "Bachelor of Engineering (Honours) in Electronic (BEng) Year 3  (EEELC_B_Y3)"
+            },
+            {
+                "code": "EEELC_B_Y4",
+                "name": "Bachelor of Engineering (Honours) in Electronic (BEng) Year 4  (EEELC_B_Y4)"
+            },
+            {
+                "code": "EENCE_B_Y1",
+                "name": "Bachelor of Engineering Year 1  (EENCE_B_Y1)"
+            },
+            {
+                "code": "EELCT_D_Y1",
+                "name": "Bachelor of Engineering in Electrical Engineering Year 1  (EELCT_D_Y1)"
+            },
+            {
+                "code": "EELCT_D_Y2",
+                "name": "Bachelor of Engineering in Electrical Engineering Year 2  (EELCT_D_Y2)"
+            },
+            {
+                "code": "EELCT_D_Y3",
+                "name": "Bachelor of Engineering in Electrical Engineering Year 3  (EELCT_D_Y3)"
+            },
+            {
+                "code": "EELEC_D_Y3",
+                "name": "Bachelor of Engineering in Electronic Engineering (ND) Year 3  (EELEC_D_Y3)"
+            },
+            {
+                "code": "EEENG_D_Y1",
+                "name": "Bachelor of Engineering in Electronic Engineering Year 1  (EEENG_D_Y1)"
+            },
+            {
+                "code": "EEENG_D_Y2",
+                "name": "Bachelor of Engineering in Electronic Engineering Year 2  (EEENG_D_Y2)"
+            },
+            {
+                "code": "EEENG_D_Y3",
+                "name": "Bachelor of Engineering in Electronic Engineering Year 3  (EEENG_D_Y3)"
+            },
+            {
+                "code": "EMANF_D_Y1",
+                "name": "Bachelor of Engineering in Manuf Engineering Year 1  (EMANF_D_Y1)"
+            },
+            {
+                "code": "EMANF_D_Y2",
+                "name": "Bachelor of Engineering in Manuf Engineering Year 2  (EMANF_D_Y2)"
+            },
+            {
+                "code": "EMANF_D_Y3",
+                "name": "Bachelor of Engineering in Manuf Engineering Year 3  (EMANF_D_Y3)"
+            },
+            {
+                "code": "EMANU_D_Y3",
+                "name": "Bachelor of Engineering in Manufacturing Engineering (ND) Year 3  (EMANU_D_Y3)"
+            },
+            {
+                "code": "EMECH_D_Y1",
+                "name": "Bachelor of Engineering in Mechanical Engineering Year 1  (EMECH_D_Y1)"
+            },
+            {
+                "code": "EMECH_D_Y2",
+                "name": "Bachelor of Engineering in Mechanical Engineering Year 2  (EMECH_D_Y2)"
+            },
+            {
+                "code": "EMECH_D_Y3",
+                "name": "Bachelor of Engineering in Mechanical Engineering Year 3  (EMECH_D_Y3)"
+            },
+            {
+                "code": "TCAMF_B_Y4",
+                "name": "Bachelor of Science (Honours) in Manufacturing Engineering Year 4  (TCAMF_B_Y4)"
+            },
+            {
+                "code": "CBIOM_MA_Y1",
+                "name": "Certificate in Biomedical Engineering  (CBIOM_MA_Y1)"
+            },
+            {
+                "code": "EE Authourised Institute Project",
+                "name": "EE Authourised Institute Project  (EE Authourised Institute Project)"
+            },
+            {
+                "code": "EE BYTE Initiative",
+                "name": "EE BYTE Initiative  (EE BYTE Initiative)"
+            },
+            {
+                "code": "EELEF_T_Y1",
+                "name": "Electrical - Phase 4 Year 1  (EELEF_T_Y1)"
+            },
+            {
+                "code": "EELTS_T_Y2",
+                "name": "Electrical - Phase 6 Year 2  (EELTS_T_Y2)"
+            },
+            {
+                "code": "EELSF_T_Y1",
+                "name": "Electronic Security Systems-Phase 4 Year 1  (EELSF_T_Y1)"
+            },
+            {
+                "code": "EELSF_T_Y2",
+                "name": "Electronic Security Systems-Phase 6 Year 2  (EELSF_T_Y2)"
+            },
+            {
+                "code": "EELCT_C_Y1",
+                "name": "Higher Certificate in Engineering in Electrical Engineering Year 1  (EELCT_C_Y1)"
+            },
+            {
+                "code": "EELCT_C_Y2",
+                "name": "Higher Certificate in Engineering in Electrical Engineering Year 2  (EELCT_C_Y2)"
+            },
+            {
+                "code": "EELEC_C_Y1",
+                "name": "Higher Certificate in Engineering in Electronic Eng (NC) Year 1  (EELEC_C_Y1)"
+            },
+            {
+                "code": "EELEC_C_Y2",
+                "name": "Higher Certificate in Engineering in Electronic Eng (NC) Year 2  (EELEC_C_Y2)"
+            },
+            {
+                "code": "EMECH_C_Y1",
+                "name": "Higher Certificate in Engineering in Mechanical Eng (NC) Year 1  (EMECH_C_Y1)"
+            },
+            {
+                "code": "EMECH_C_Y2",
+                "name": "Higher Certificate in Engineering in Mechanical Eng (NC) Year 2  (EMECH_C_Y2)"
+            },
+            {
+                "code": "CINNT_R_Y5",
+                "name": "MEng Sc in Innovative Technologies Year 5  (CINNT_R_Y5)"
+            },
+            {
+                "code": "EADET_R_Y5",
+                "name": "Master Of Science in Advanced Engineering Techniques Year 5  (EADET_R_Y5)"
+            },
+            {
+                "code": "EELEN_R_Y5",
+                "name": "Master of Engineering in Electronic Engineering Year 5  (EELEN_R_Y5)"
+            },
+            {
+                "code": "EMOTF_T_Y1",
+                "name": "Motor - Phase 4 Year 1  (EMOTF_T_Y1)"
+            },
+            {
+                "code": "EMTRS_T_Y2",
+                "name": "Motor - Phase 6 Year 2  (EMTRS_T_Y2)"
+            },
+            {
+                "code": "EPLUF_T_Y1",
+                "name": "Plumbing - Phase 4 Year 1  (EPLUF_T_Y1)"
+            },
+            {
+                "code": "EPLUF_T_Y2",
+                "name": "Plumbing - Phase 6 Year 2  (EPLUF_T_Y2)"
+            },
+            {
+                "code": "EENGR_P_Y10",
+                "name": "Postgraduate Studies - Engineering Year 10  (EENGR_P_Y10)"
+            },
+            {
+                "code": "EENGR_M_Y6",
+                "name": "Postgraduate Studies - Engineering Year 6  (EENGR_M_Y6)"
+            },
+            {
+                "code": "EETEC_M_Y6",
+                "name": "Postgraduate Studies - Engineering Year 6  (EETEC_M_Y6)"
+            },
+            {
+                "code": "EE_PM Tasks",
+                "name": "Programme Management Tasks  (EE_PM Tasks)"
+            },
+            { "code": "EE Research", "name": "Research  (EE Research)" }
         ]
     },
     {
@@ -1217,10 +1706,6 @@
                 "name": "Bachelor of Engineering in Building Services (ND) Year 3  (EBULD_D_Y3)"
             },
             {
-                "code": "EBSER_D_Y1",
-                "name": "Bachelor of Engineering in Building Services Engineering Year 1  (EBSER_D_Y1)"
-            },
-            {
                 "code": "EBSER_D_Y3",
                 "name": "Bachelor of Engineering in Building Services Engineering Year 3  (EBSER_D_Y3)"
             },
@@ -1283,6 +1768,10 @@
             {
                 "code": "CCOEC_D_Y3",
                 "name": "Bachelor of Science in Construction Economics Year 3  (CCOEC_D_Y3)"
+            },
+            {
+                "code": "EBLYF_T_Y1",
+                "name": "Bricklaying Apprenticeship Year 1  (EBLYF_T_Y1)"
             },
             {
                 "code": "CCINT_SP_Y5",
@@ -1367,9 +1856,6 @@
                 "code": "HSPEX_P_Y0",
                 "name": " Doctor of Philosophy  (HSPEX_P_Y0)"
             },
-            { "code": "HHEEX_B_Y2", "name": " Year 2  (HHEEX_B_Y2)" },
-            { "code": "HNUEX_B_Y4", "name": " Year 4  (HNUEX_B_Y4)" },
-            { "code": "HSPEX_B_Y4", "name": " Year 4  (HSPEX_B_Y4)" },
             {
                 "code": "HESCM_B_Y1",
                 "name": "Bachelor of Arts (H) in  Exercise Sciences Year 1  (HESCM_B_Y1)"
@@ -1427,6 +1913,10 @@
                 "name": "Bachelor of Science (H) in Health and Exercise Science Year 1  (HHEEX_B_Y1)"
             },
             {
+                "code": "HHEEX_B_Y2",
+                "name": "Bachelor of Science (H) in Health and Exercise Science Year 2  (HHEEX_B_Y2)"
+            },
+            {
                 "code": "HHEEX_B_Y3",
                 "name": "Bachelor of Science (H) in Health and Exercise Science Year 3  (HHEEX_B_Y3)"
             },
@@ -1443,12 +1933,20 @@
                 "name": "Bachelor of Science (H) in Nutriton and Exercise Science Year 2  (HNUEX_B_Y2)"
             },
             {
+                "code": "HNUEX_B_Y4",
+                "name": "Bachelor of Science (H) in Nutriton and Exercise Science Year 4  (HNUEX_B_Y4)"
+            },
+            {
                 "code": "HSPEX_B_Y1",
                 "name": "Bachelor of Science (H) in Sport and Exercise Science Year 1  (HSPEX_B_Y1)"
             },
             {
                 "code": "HSPEX_B_Y2",
                 "name": "Bachelor of Science (H) in Sport and Exercise Science Year 2  (HSPEX_B_Y2)"
+            },
+            {
+                "code": "HSPEX_B_Y4",
+                "name": "Bachelor of Science (H) in Sport and Exercise Science Year 4  (HSPEX_B_Y4)"
             },
             {
                 "code": "HSPOR_B_Y1",
@@ -1538,586 +2036,6 @@
                 "name": "Part-time Music School  (Part-time Music School)"
             },
             { "code": "Deise Choir", "name": "xxDeise Choir  (Deise Choir)" }
-        ]
-    },
-    {
-        "code": "HC",
-        "name": "HC - Creative & Performing Arts",
-        "courses": [
-            {
-                "code": "DVISC_B_Y1",
-                "name": " BA (H) Design (Visual Communications) Year 1  (DVISC_B_Y1)"
-            },
-            {
-                "code": "DVISC_B_Y2",
-                "name": " BA (H) Design (Visual Communications) Year 2  (DVISC_B_Y2)"
-            },
-            {
-                "code": "DVISC_B_Y3",
-                "name": " BA (H) Design (Visual Communications) Year 3  (DVISC_B_Y3)"
-            },
-            {
-                "code": "DVISC_B_Y4",
-                "name": "BA (H) Design (Visual Communications) Year 4  (DVISC_B_Y4)"
-            },
-            {
-                "code": "AVISA_B_Y1",
-                "name": "BA (Hons) in Visual Art Year 1  (AVISA_B_Y1)"
-            },
-            {
-                "code": "AVISA_B_Y2",
-                "name": "BA (Hons) in Visual Art Year 2  (AVISA_B_Y2)"
-            },
-            {
-                "code": "AVISA_B_Y3",
-                "name": "BA (Hons) in Visual Art Year 3  (AVISA_B_Y3)"
-            },
-            {
-                "code": "AVISA_B_Y4",
-                "name": "BA (Hons) in Visual Art Year 4  (AVISA_B_Y4)"
-            },
-            {
-                "code": "GSOCI_B_Y4",
-                "name": "Bachelor of Arts (Honours) in Art in Society (BA) Year 4  (GSOCI_B_Y4)"
-            },
-            {
-                "code": "GMUSI_B_Y1",
-                "name": "Bachelor of Arts (Honours) in Music (BA) Year 1  (GMUSI_B_Y1)"
-            },
-            {
-                "code": "GMUSI_B_Y2",
-                "name": "Bachelor of Arts (Honours) in Music (BA) Year 2  (GMUSI_B_Y2)"
-            },
-            {
-                "code": "GMUSI_B_Y3",
-                "name": "Bachelor of Arts (Honours) in Music (BA) Year 3  (GMUSI_B_Y3)"
-            },
-            {
-                "code": "GMUSI_B_Y4",
-                "name": "Bachelor of Arts (Honours) in Music (BA) Year 4  (GMUSI_B_Y4)"
-            },
-            {
-                "code": "GMUSI_B_Y5",
-                "name": "Bachelor of Arts (Honours) in Music (BA) Year 5  (GMUSI_B_Y5)"
-            },
-            {
-                "code": "HC Authorised Insititute Absence",
-                "name": "HC Authorised Insititute Absence  (HC Authorised Insititute Absence)"
-            },
-            {
-                "code": "HC Authorised Insititute Project",
-                "name": "HC Authorised Insititute Project  (HC Authorised Insititute Project)"
-            },
-            {
-                "code": "AARTS_M_Y5",
-                "name": "Master of Arts Creative & Performing Arts Year 5  (AARTS_M_Y5)"
-            },
-            {
-                "code": "AARTS_M_Y6",
-                "name": "Master of Arts Creative & Performing Arts Year 6  (AARTS_M_Y6)"
-            },
-            {
-                "code": "AHERT_R_Y5",
-                "name": "Master of Arts in Arts & Heritage Management Year 5  (AHERT_R_Y5)"
-            },
-            {
-                "code": "HC WDPHC_Y5",
-                "name": "Postgraduate Studies - Creative Arts  (HC WDPHC_Y5)"
-            },
-            {
-                "code": "HC PMTasks",
-                "name": "Programme Management Tasks  (HC PMTasks)"
-            },
-            { "code": "HC Tutoring", "name": "Tutoring  (HC Tutoring)" }
-        ]
-    },
-    {
-        "code": "HA",
-        "name": "HA - Applied Arts",
-        "courses": [
-            { "code": "HCURE_C_Y2", "name": " Year 2  (HCURE_C_Y2)" },
-            {
-                "code": "HAPSC_D_Y1",
-                "name": "BA in Applied Social Care Year 1  (HAPSC_D_Y1)"
-            },
-            {
-                "code": "HAPSC_D_Y2",
-                "name": "BA in Applied Social Care Year 2  (HAPSC_D_Y2)"
-            },
-            {
-                "code": "HAPSC_D_Y3",
-                "name": "BA in Applied Social Care Year 3  (HAPSC_D_Y3)"
-            },
-            {
-                "code": "GTHSO_B_Y1",
-                "name": "Bachelor of Arts (H) Theology and Society (BA) Year 1  (GTHSO_B_Y1)"
-            },
-            {
-                "code": "GTHSO_B_Y2",
-                "name": "Bachelor of Arts (H) Theology and Society (BA) Year 2  (GTHSO_B_Y2)"
-            },
-            {
-                "code": "GTHSO_B_Y3",
-                "name": "Bachelor of Arts (H) Theology and Society (BA) Year 3  (GTHSO_B_Y3)"
-            },
-            {
-                "code": "GTHSO_B_Y4",
-                "name": "Bachelor of Arts (H) Theology and Society (BA) Year 4  (GTHSO_B_Y4)"
-            },
-            {
-                "code": "HARTS_B_Y1",
-                "name": "Bachelor of Arts (H) Year 1  (HARTS_B_Y1)"
-            },
-            {
-                "code": "HARTS_B_Y2",
-                "name": "Bachelor of Arts (H) Year 2  (HARTS_B_Y2)"
-            },
-            {
-                "code": "HARTS_B_Y3",
-                "name": "Bachelor of Arts (H) Year 3  (HARTS_B_Y3)"
-            },
-            {
-                "code": "HSSSC_B_Y4",
-                "name": "Bachelor of Arts (H) in Applied Social Studies in Social Care Year 4  (HSSSC_B_Y4)"
-            },
-            {
-                "code": "HSSSC_B_Y4 _E1",
-                "name": "Bachelor of Arts (H) in Applied Social Studies in Social Care Year 4 _E1  (HSSSC_B_Y4 _E1)"
-            },
-            {
-                "code": "HCRJU_B_Y1",
-                "name": "Bachelor of Arts (H) in Criminal Justice Studies Year 1  (HCRJU_B_Y1)"
-            },
-            {
-                "code": "HCRJU_B_Y2",
-                "name": "Bachelor of Arts (H) in Criminal Justice Studies Year 2  (HCRJU_B_Y2)"
-            },
-            {
-                "code": "HCRJU_B_Y3",
-                "name": "Bachelor of Arts (H) in Criminal Justice Studies Year 3  (HCRJU_B_Y3)"
-            },
-            {
-                "code": "HECHS_B_Y1",
-                "name": "Bachelor of Arts (H) in Early Childhood Studies Year 1  (HECHS_B_Y1)"
-            },
-            {
-                "code": "HECHS_B_Y2",
-                "name": "Bachelor of Arts (H) in Early Childhood Studies Year 2  (HECHS_B_Y2)"
-            },
-            {
-                "code": "HECHS_B_Y3",
-                "name": "Bachelor of Arts (H) in Early Childhood Studies Year 3  (HECHS_B_Y3)"
-            },
-            {
-                "code": "HLEST_B_Y1",
-                "name": "Bachelor of Arts (H) in Legal Studies Year 1  (HLEST_B_Y1)"
-            },
-            {
-                "code": "HLEST_B_Y2",
-                "name": "Bachelor of Arts (H) in Legal Studies Year 2  (HLEST_B_Y2)"
-            },
-            {
-                "code": "HLEST_B_Y3",
-                "name": "Bachelor of Arts (H) in Legal Studies Year 3  (HLEST_B_Y3)"
-            },
-            {
-                "code": "HLEGB_B_Y4",
-                "name": "Bachelor of Arts (H) in Legal and Business Studies Year 4  (HLEGB_B_Y4)"
-            },
-            {
-                "code": "HPSYC_B_Y1",
-                "name": "Bachelor of Arts (H) in Psychology Year 1  (HPSYC_B_Y1)"
-            },
-            {
-                "code": "HPSYC_B_Y2",
-                "name": "Bachelor of Arts (H) in Psychology Year 2  (HPSYC_B_Y2)"
-            },
-            {
-                "code": "HPSYC_B_Y3",
-                "name": "Bachelor of Arts (H) in Psychology Year 3  (HPSYC_B_Y3)"
-            },
-            {
-                "code": "HSOCR_B_Y1",
-                "name": "Bachelor of Arts (H) in Social Care Practice Year 1  (HSOCR_B_Y1)"
-            },
-            {
-                "code": "HSOCR_B_Y2",
-                "name": "Bachelor of Arts (H) in Social Care Practice Year 2  (HSOCR_B_Y2)"
-            },
-            {
-                "code": "HSOCR_B_Y3",
-                "name": "Bachelor of Arts (H) in Social Care Practice Year 3  (HSOCR_B_Y3)"
-            },
-            {
-                "code": "HSOCR_B_Y4",
-                "name": "Bachelor of Arts (H) in Social Care Practice Year 4  (HSOCR_B_Y4)"
-            },
-            {
-                "code": "HSOSC_B_Y1",
-                "name": "Bachelor of Arts (H) in Social Science Year 1  (HSOSC_B_Y1)"
-            },
-            {
-                "code": "HSOSC_B_Y2",
-                "name": "Bachelor of Arts (H) in Social Science Year 2  (HSOSC_B_Y2)"
-            },
-            {
-                "code": "HSOSC_B_Y3",
-                "name": "Bachelor of Arts (H) in Social Science Year 3  (HSOSC_B_Y3)"
-            },
-            {
-                "code": "HSSSC_D_Y1",
-                "name": "Bachelor of Arts in Applied Social Studies in SocialCare Year 1  (HSSSC_D_Y1)"
-            },
-            {
-                "code": "HSSSC_D_Y2",
-                "name": "Bachelor of Arts in Applied Social Studies in SocialCare Year 2  (HSSSC_D_Y2)"
-            },
-            {
-                "code": "HSSSC_D_Y3",
-                "name": "Bachelor of Arts in Applied Social Studies in SocialCare Year 3  (HSSSC_D_Y3)"
-            },
-            {
-                "code": "HLEGL_D_Y3",
-                "name": "Bachelor of Arts in Legal Studies Year 3  (HLEGL_D_Y3)"
-            },
-            {
-                "code": "HINTR_D_Y3",
-                "name": "Bachelor of Arts in Legal Studies in Int Trade Year 3  (HINTR_D_Y3)"
-            },
-            {
-                "code": "AARTS_P_Y7",
-                "name": "Doctor of Philisophy in Arts  (AARTS_P_Y7)"
-            },
-            {
-                "code": "GARTS_P_Y6",
-                "name": "Doctor of Philosophy Year 6  (GARTS_P_Y6)"
-            },
-            {
-                "code": "HA Authorised Insititute Absence",
-                "name": "HA Authorised Insititute Absence  (HA Authorised Insititute Absence)"
-            },
-            {
-                "code": "HA Authorised Insititute Project",
-                "name": "HA Authorised Insititute Project  (HA Authorised Insititute Project)"
-            },
-            {
-                "code": "HA Funded Research Project",
-                "name": "HA Funded Research Project  (HA Funded Research Project)"
-            },
-            {
-                "code": "HA Work Placement Co-Ordination",
-                "name": "HA Work Placement Co-Ordination  (HA Work Placement Co-Ordination)"
-            },
-            {
-                "code": "HLEGA_C_Y1",
-                "name": "Higher Certificate in Arts in Legal Studies Year 1  (HLEGA_C_Y1)"
-            },
-            {
-                "code": "HLEGA_C_Y2",
-                "name": "Higher Certificate in Arts in Legal Studies Year 2  (HLEGA_C_Y2)"
-            },
-            {
-                "code": "HCURE_C_Y1",
-                "name": "Higher Certificate in Custodial Care Year 1  (HCURE_C_Y1)"
-            },
-            {
-                "code": "GARTS_M_Y6",
-                "name": "Master of Arts Applied Arts Year 6  (GARTS_M_Y6)"
-            },
-            {
-                "code": "HSPRT_R_Y5",
-                "name": "Master of Arts in Applied Spirituality Year 5  (HSPRT_R_Y5)"
-            },
-            {
-                "code": "HSOST_R_Y5",
-                "name": "Master of Arts in Social Studies Year 5  (HSOST_R_Y5)"
-            },
-            {
-                "code": "HSOST_R_Y6",
-                "name": "Master of Arts in Social Studies Year 6  (HSOST_R_Y6)"
-            },
-            {
-                "code": "HSOJU_R_Y5",
-                "name": "Masters in Social Justice Year 5  (HSOJU_R_Y5)"
-            },
-            {
-                "code": "HLAWH_G_Y5",
-                "name": "Postgraduate Diploma in Law Year 5  (HLAWH_G_Y5)"
-            },
-            {
-                "code": "HA PM Tasks",
-                "name": "Programme Management Tasks  (HA PM Tasks)"
-            },
-            { "code": "HA Research", "name": "Research  (HA Research)" },
-            { "code": "HA Tutoring", "name": "Tutoring  (HA Tutoring)" }
-        ]
-    },
-    {
-        "code": "ET",
-        "name": "ET - Trade Studies",
-        "courses": [
-            {
-                "code": "ECRSK_MA_Y1",
-                "name": "Certificate in Craft Transferable Skills (Special Purpose)  (ECRSK_MA_Y1)"
-            },
-            {
-                "code": "TEAGASC_Y1",
-                "name": "Dip. In Machinery & Arable Crops Year 1  (TEAGASC_Y1)"
-            },
-            {
-                "code": "ET Authourised Institute Project",
-                "name": "ET Authourised Institute Project  (ET Authourised Institute Project)"
-            },
-            {
-                "code": "ET PM Tasks",
-                "name": "Programme Management Tasks  (ET PM Tasks)"
-            },
-            { "code": "ET Research", "name": "Research  (ET Research)" }
-        ]
-    },
-    {
-        "code": "EE",
-        "name": "EE - Engineering Technology",
-        "courses": [
-            { "code": "EONIC_B_Y1", "name": " Year 1  (EONIC_B_Y1)" },
-            { "code": "EONIC_B_Y2", "name": " Year 2  (EONIC_B_Y2)" },
-            {
-                "code": "ETRIC_B_Y1",
-                "name": "BEng ( H) in Electrical Engineering Year 1  (ETRIC_B_Y1)"
-            },
-            {
-                "code": "ETRIC_B_Y2",
-                "name": "BEng ( H) in Electrical Engineering Year 2  (ETRIC_B_Y2)"
-            },
-            {
-                "code": "ETRIC_B_Y3",
-                "name": "BEng ( H) in Electrical Engineering Year 3  (ETRIC_B_Y3)"
-            },
-            {
-                "code": "ETRIC_B_Y4",
-                "name": "BEng ( H) in Electrical Engineering Year 4  (ETRIC_B_Y4)"
-            },
-            {
-                "code": "EELEC_B_Y1",
-                "name": "Bachelor Of Science (Honours) in Applied Electronics Year 1  (EELEC_B_Y1)"
-            },
-            {
-                "code": "EELEC_B_Y2",
-                "name": "Bachelor Of Science (Honours) in Applied Electronics Year 2  (EELEC_B_Y2)"
-            },
-            {
-                "code": "EELEC_B_Y3",
-                "name": "Bachelor Of Science (Honours) in Applied Electronics Year 3  (EELEC_B_Y3)"
-            },
-            {
-                "code": "EELEC_B_Y4",
-                "name": "Bachelor Of Science (Honours) in Applied Electronics Year 4  (EELEC_B_Y4)"
-            },
-            {
-                "code": "EONIC_B_Y3",
-                "name": "Bachelor of Engineering (H) in Electronic Engineering  Year 3  (EONIC_B_Y3)"
-            },
-            {
-                "code": "EMSEN_B_Y1",
-                "name": "Bachelor of Engineering (H) in Mech & Manufacturing Eng Year 1  (EMSEN_B_Y1)"
-            },
-            {
-                "code": "EMSEN_B_Y2",
-                "name": "Bachelor of Engineering (H) in Mech & Manufacturing Eng Year 2  (EMSEN_B_Y2)"
-            },
-            {
-                "code": "EMSEN_B_Y3",
-                "name": "Bachelor of Engineering (H) in Mech & Manufacturing Eng Year 3  (EMSEN_B_Y3)"
-            },
-            {
-                "code": "EMSEN_B_Y4",
-                "name": "Bachelor of Engineering (H) in Mech & Manufacturing Eng Year 4  (EMSEN_B_Y4)"
-            },
-            {
-                "code": "EELCT_B_Y4",
-                "name": "Bachelor of Engineering (Honours) in Electrical Engineering Year 4  (EELCT_B_Y4)"
-            },
-            {
-                "code": "EELCT_B_Y5",
-                "name": "Bachelor of Engineering (Honours) in Electrical Engineering Year 5  (EELCT_B_Y5)"
-            },
-            {
-                "code": "EEELC_B_Y1",
-                "name": "Bachelor of Engineering (Honours) in Electronic (BEng) Year 1  (EEELC_B_Y1)"
-            },
-            {
-                "code": "EEELC_B_Y2",
-                "name": "Bachelor of Engineering (Honours) in Electronic (BEng) Year 2  (EEELC_B_Y2)"
-            },
-            {
-                "code": "EEELC_B_Y3",
-                "name": "Bachelor of Engineering (Honours) in Electronic (BEng) Year 3  (EEELC_B_Y3)"
-            },
-            {
-                "code": "EEELC_B_Y4",
-                "name": "Bachelor of Engineering (Honours) in Electronic (BEng) Year 4  (EEELC_B_Y4)"
-            },
-            {
-                "code": "EENCE_B_Y1",
-                "name": "Bachelor of Engineering Year 1  (EENCE_B_Y1)"
-            },
-            {
-                "code": "EELCT_D_Y1",
-                "name": "Bachelor of Engineering in Electrical Engineering Year 1  (EELCT_D_Y1)"
-            },
-            {
-                "code": "EELCT_D_Y2",
-                "name": "Bachelor of Engineering in Electrical Engineering Year 2  (EELCT_D_Y2)"
-            },
-            {
-                "code": "EELCT_D_Y3",
-                "name": "Bachelor of Engineering in Electrical Engineering Year 3  (EELCT_D_Y3)"
-            },
-            {
-                "code": "EELEC_D_Y3",
-                "name": "Bachelor of Engineering in Electronic Engineering (ND) Year 3  (EELEC_D_Y3)"
-            },
-            {
-                "code": "EEENG_D_Y1",
-                "name": "Bachelor of Engineering in Electronic Engineering Year 1  (EEENG_D_Y1)"
-            },
-            {
-                "code": "EEENG_D_Y2",
-                "name": "Bachelor of Engineering in Electronic Engineering Year 2  (EEENG_D_Y2)"
-            },
-            {
-                "code": "EEENG_D_Y3",
-                "name": "Bachelor of Engineering in Electronic Engineering Year 3  (EEENG_D_Y3)"
-            },
-            {
-                "code": "EMANF_D_Y1",
-                "name": "Bachelor of Engineering in Manuf Engineering Year 1  (EMANF_D_Y1)"
-            },
-            {
-                "code": "EMANF_D_Y2",
-                "name": "Bachelor of Engineering in Manuf Engineering Year 2  (EMANF_D_Y2)"
-            },
-            {
-                "code": "EMANF_D_Y3",
-                "name": "Bachelor of Engineering in Manuf Engineering Year 3  (EMANF_D_Y3)"
-            },
-            {
-                "code": "EMANU_D_Y3",
-                "name": "Bachelor of Engineering in Manufacturing Engineering (ND) Year 3  (EMANU_D_Y3)"
-            },
-            {
-                "code": "EMECH_D_Y1",
-                "name": "Bachelor of Engineering in Mechanical Engineering Year 1  (EMECH_D_Y1)"
-            },
-            {
-                "code": "EMECH_D_Y2",
-                "name": "Bachelor of Engineering in Mechanical Engineering Year 2  (EMECH_D_Y2)"
-            },
-            {
-                "code": "EMECH_D_Y3",
-                "name": "Bachelor of Engineering in Mechanical Engineering Year 3  (EMECH_D_Y3)"
-            },
-            {
-                "code": "TCAMF_B_Y4",
-                "name": "Bachelor of Science (Honours) in Manufacturing Engineering Year 4  (TCAMF_B_Y4)"
-            },
-            {
-                "code": "CBIOM_MA_Y1",
-                "name": "Certificate in Biomedical Engineering  (CBIOM_MA_Y1)"
-            },
-            {
-                "code": "EE Authourised Institute Project",
-                "name": "EE Authourised Institute Project  (EE Authourised Institute Project)"
-            },
-            {
-                "code": "EE BYTE Initiative",
-                "name": "EE BYTE Initiative  (EE BYTE Initiative)"
-            },
-            {
-                "code": "EELEF_T_Y1",
-                "name": "Electrical - Phase 4 Year 1  (EELEF_T_Y1)"
-            },
-            {
-                "code": "EELTS_T_Y2",
-                "name": "Electrical - Phase 6 Year 2  (EELTS_T_Y2)"
-            },
-            {
-                "code": "EELSF_T_Y1",
-                "name": "Electronic Security Systems-Phase 4 Year 1  (EELSF_T_Y1)"
-            },
-            {
-                "code": "EELSF_T_Y2",
-                "name": "Electronic Security Systems-Phase 6 Year 2  (EELSF_T_Y2)"
-            },
-            {
-                "code": "EELCT_C_Y1",
-                "name": "Higher Certificate in Engineering in Electrical Engineering Year 1  (EELCT_C_Y1)"
-            },
-            {
-                "code": "EELCT_C_Y2",
-                "name": "Higher Certificate in Engineering in Electrical Engineering Year 2  (EELCT_C_Y2)"
-            },
-            {
-                "code": "EELEC_C_Y1",
-                "name": "Higher Certificate in Engineering in Electronic Eng (NC) Year 1  (EELEC_C_Y1)"
-            },
-            {
-                "code": "EELEC_C_Y2",
-                "name": "Higher Certificate in Engineering in Electronic Eng (NC) Year 2  (EELEC_C_Y2)"
-            },
-            {
-                "code": "EMECH_C_Y1",
-                "name": "Higher Certificate in Engineering in Mechanical Eng (NC) Year 1  (EMECH_C_Y1)"
-            },
-            {
-                "code": "EMECH_C_Y2",
-                "name": "Higher Certificate in Engineering in Mechanical Eng (NC) Year 2  (EMECH_C_Y2)"
-            },
-            {
-                "code": "CINNT_R_Y5",
-                "name": "MEng Sc in Innovative Technologies Year 5  (CINNT_R_Y5)"
-            },
-            {
-                "code": "EADET_R_Y5",
-                "name": "Master Of Science in Advanced Engineering Techniques Year 5  (EADET_R_Y5)"
-            },
-            {
-                "code": "EELEN_R_Y5",
-                "name": "Master of Engineering in Electronic Engineering Year 5  (EELEN_R_Y5)"
-            },
-            {
-                "code": "EMOTF_T_Y1",
-                "name": "Motor - Phase 4 Year 1  (EMOTF_T_Y1)"
-            },
-            {
-                "code": "EMTRS_T_Y2",
-                "name": "Motor - Phase 6 Year 2  (EMTRS_T_Y2)"
-            },
-            {
-                "code": "EPLUF_T_Y1",
-                "name": "Plumbing - Phase 4 Year 1  (EPLUF_T_Y1)"
-            },
-            {
-                "code": "EPLUF_T_Y2",
-                "name": "Plumbing - Phase 6 Year 2  (EPLUF_T_Y2)"
-            },
-            {
-                "code": "EENGR_P_Y10",
-                "name": "Postgraduate Studies - Engineering Year 10  (EENGR_P_Y10)"
-            },
-            {
-                "code": "EENGR_M_Y6",
-                "name": "Postgraduate Studies - Engineering Year 6  (EENGR_M_Y6)"
-            },
-            {
-                "code": "EETEC_M_Y6",
-                "name": "Postgraduate Studies - Engineering Year 6  (EETEC_M_Y6)"
-            },
-            {
-                "code": "EE_PM Tasks",
-                "name": "Programme Management Tasks  (EE_PM Tasks)"
-            },
-            { "code": "EE Research", "name": "Research  (EE Research)" }
         ]
     },
     {
@@ -2278,6 +2196,10 @@
             {
                 "code": "HARTF_SP_Y5",
                 "name": "Certificate in Artisan Food Development with Business  (HARTF_SP_Y5)"
+            },
+            {
+                "code": "OFBOP_SP_Y1",
+                "name": "Certificate in Food and Beverage Operations\n\n  (OFBOP_SP_Y1)"
             },
             {
                 "code": "FTOUR_MA_Y1",
@@ -2567,6 +2489,97 @@
                 "code": "BMGTO_M_Y5",
                 "name": "Master of Business Year 5  (BMGTO_M_Y5)"
             }
+        ]
+    },
+    {
+        "code": "HC",
+        "name": "HC - Creative & Performing Arts",
+        "courses": [
+            {
+                "code": "DVISC_B_Y1",
+                "name": " BA (H) Design (Visual Communications) Year 1  (DVISC_B_Y1)"
+            },
+            {
+                "code": "DVISC_B_Y2",
+                "name": " BA (H) Design (Visual Communications) Year 2  (DVISC_B_Y2)"
+            },
+            {
+                "code": "DVISC_B_Y3",
+                "name": " BA (H) Design (Visual Communications) Year 3  (DVISC_B_Y3)"
+            },
+            {
+                "code": "DVISC_B_Y4",
+                "name": "BA (H) Design (Visual Communications) Year 4  (DVISC_B_Y4)"
+            },
+            {
+                "code": "AVISA_B_Y1",
+                "name": "BA (Hons) in Visual Art Year 1  (AVISA_B_Y1)"
+            },
+            {
+                "code": "AVISA_B_Y2",
+                "name": "BA (Hons) in Visual Art Year 2  (AVISA_B_Y2)"
+            },
+            {
+                "code": "AVISA_B_Y3",
+                "name": "BA (Hons) in Visual Art Year 3  (AVISA_B_Y3)"
+            },
+            {
+                "code": "AVISA_B_Y4",
+                "name": "BA (Hons) in Visual Art Year 4  (AVISA_B_Y4)"
+            },
+            {
+                "code": "GSOCI_B_Y4",
+                "name": "Bachelor of Arts (Honours) in Art in Society (BA) Year 4  (GSOCI_B_Y4)"
+            },
+            {
+                "code": "GMUSI_B_Y1",
+                "name": "Bachelor of Arts (Honours) in Music (BA) Year 1  (GMUSI_B_Y1)"
+            },
+            {
+                "code": "GMUSI_B_Y2",
+                "name": "Bachelor of Arts (Honours) in Music (BA) Year 2  (GMUSI_B_Y2)"
+            },
+            {
+                "code": "GMUSI_B_Y3",
+                "name": "Bachelor of Arts (Honours) in Music (BA) Year 3  (GMUSI_B_Y3)"
+            },
+            {
+                "code": "GMUSI_B_Y4",
+                "name": "Bachelor of Arts (Honours) in Music (BA) Year 4  (GMUSI_B_Y4)"
+            },
+            {
+                "code": "GMUSI_B_Y5",
+                "name": "Bachelor of Arts (Honours) in Music (BA) Year 5  (GMUSI_B_Y5)"
+            },
+            {
+                "code": "HC Authorised Insititute Absence",
+                "name": "HC Authorised Insititute Absence  (HC Authorised Insititute Absence)"
+            },
+            {
+                "code": "HC Authorised Insititute Project",
+                "name": "HC Authorised Insititute Project  (HC Authorised Insititute Project)"
+            },
+            {
+                "code": "AARTS_M_Y5",
+                "name": "Master of Arts Creative & Performing Arts Year 5  (AARTS_M_Y5)"
+            },
+            {
+                "code": "AARTS_M_Y6",
+                "name": "Master of Arts Creative & Performing Arts Year 6  (AARTS_M_Y6)"
+            },
+            {
+                "code": "AHERT_R_Y5",
+                "name": "Master of Arts in Arts & Heritage Management Year 5  (AHERT_R_Y5)"
+            },
+            {
+                "code": "HC WDPHC_Y5",
+                "name": "Postgraduate Studies - Creative Arts  (HC WDPHC_Y5)"
+            },
+            {
+                "code": "HC PMTasks",
+                "name": "Programme Management Tasks  (HC PMTasks)"
+            },
+            { "code": "HC Tutoring", "name": "Tutoring  (HC Tutoring)" }
         ]
     }
 ]
