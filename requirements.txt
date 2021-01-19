@@ -2,3 +2,4 @@ flask
 flask-cors
 bs4
 selenium
+gunicorn
