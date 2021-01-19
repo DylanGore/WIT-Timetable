@@ -39,6 +39,8 @@ def get_timetable(dept, prog):
     Select(driver.find_element_by_id('CboDept')).select_by_value(dept)
     # Programme Select
     Select(driver.find_element_by_id('CboPOS')).select_by_value(prog)
+    # Week Select
+    Select(driver.find_element_by_id('CboWeeks')).select_by_value("22")
     # Request Timetable
     driver.find_element_by_id('BtnRetrieve').click()
     soup = BeautifulSoup(driver.page_source, 'html.parser')
@@ -70,6 +72,12 @@ def get_timetable(dept, prog):
     for idx, entry in enumerate(complete_timetable):
         # if 'kintt_b4W_W' in entry['groups'] or 'kintt_b4W_W2' in entry['groups']:
         entry['id'] = idx
+        entry['ignore'] = False
+        if 'online' in str(entry['type']).lower():
+            entry['online'] = True
+        else:
+            entry['online'] = False
+        entry['type'] = entry['type'].replace('OnLine', 'Online').replace('OnCampus', 'On Campus')
         group_timetable.append(entry)
 
     # for item in group_timetable:
@@ -90,7 +98,7 @@ def get_timetable(dept, prog):
 
     for idx, item in enumerate(group_timetable):
         if idx > 0:
-            if item['name'] == group_timetable[idx - 1]['name'] and item['time'] == group_timetable[idx - 1]['time']:
+            if item['name'] == group_timetable[idx - 1]['name'] and item['time'] == group_timetable[idx - 1]['time'] and item['groups'] == group_timetable[idx - 1]['groups']:
                 group_timetable.remove(item)
 
     # print(len(group_timetable))
