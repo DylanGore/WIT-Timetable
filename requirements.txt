@@ -4,3 +4,5 @@ bs4
 selenium
 gunicorn
 pytz
+icalendar
+recurring_ical_events
