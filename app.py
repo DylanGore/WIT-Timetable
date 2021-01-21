@@ -88,7 +88,3 @@ def route_get_calendar():
 
 def display(cal):
     return str(cal.to_ical()).replace('\r\n', '\n').strip()
-
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0')
