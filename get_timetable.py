@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 from bs4 import BeautifulSoup
+import os
 
 
 def get_day(number):
@@ -30,7 +31,10 @@ def get_timetable(dept, prog):
     options = webdriver.ChromeOptions()
     options.add_argument('headless')
     options.add_argument('log-level=3')
-    driver = webdriver.Chrome(options=options)
+    options.add_argument('disable-dev-shm-usage')
+    options.add_argument('no-sandbox')
+    options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+    driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=options)
     # driver = webdriver.Firefox()
     driver.get('http://studentssp.wit.ie/Timetables/POSTT.aspx')
 
