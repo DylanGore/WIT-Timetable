@@ -44,23 +44,16 @@
                             <input id="switchIgnored" v-model="showIgnored" class="form-check-input" type="checkbox" />
                             <label class="form-check-label" for="switchIgnored">Show ignored events</label>
                         </div>
+                        <div class="mb-3">
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-info" @click="merge_following()" :disabled="eventsMerged">Merge long classes into a single event</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
                 <div v-if="timetable.length > 0" class="col-sm-12">
                     <h3>Export Options</h3>
                     <form>
-                        <div class="mb-3">
-                            <label for="inputCalendarType" class="form-label">Calendar Type</label>
-                            <select id="inputCalendarType" v-model="optionsForm.calendarType" class="form-select" aria-label="Calendar type">
-                                <option v-for="calType in calTypes" :key="calType.id" :value="calType.id">
-                                    {{ calType.name }}
-                                </option>
-                            </select>
-                            <!-- <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" v-model="optionsForm.removeProgrammeCode" id="switchRemoveProgCode" @click="update_prog_code()" />
-                            <label class="form-check-label" for="switchRemoveProgCode">Remove Programme Code</label>
-                        </div> -->
-                        </div>
                         <div class="mb-3">
                             <div class="btn-group" role="group">
                                 <button type="button" class="btn btn-info" @click="generate_ical()">Download .ical</button>
@@ -97,7 +90,9 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Time</th>
+                                        <th scope="col">Start Time</th>
+                                        <th scope="col">End Time</th>
+                                        <th scope="col">Duration</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">Groups</th>
                                         <th scope="col">Type</th>
@@ -122,6 +117,8 @@
                                         }"
                                     >
                                         <td>{{ event.time }}</td>
+                                        <td>{{ (parseInt(event.time.split(':')[0], 10) + parseInt(event.duration, 10)).toString() + `:${event.time.split(':')[1]}` }}</td>
+                                        <td>{{ event.duration }} hrs</td>
                                         <td>{{ event.name }}</td>
                                         <td>
                                             <ul>
@@ -164,7 +161,7 @@ import axios from 'axios';
 import timetable_data from '../json/timetable.json';
 import ical from 'ical-generator';
 import slugify from 'slugify';
-import { addDays, addHours, parse, setHours, setMinutes, getHours, getMinutes } from 'date-fns';
+import { addDays, addHours, parse } from 'date-fns';
 
 export default {
     name: 'Home',
@@ -178,10 +175,6 @@ export default {
                 removeProgrammeCode: true,
                 calendarType: 'microsoft'
             },
-            calTypes: [
-                { id: 'google', name: 'Google Calendar' },
-                { id: 'microsoft', name: 'Outlook/Office 365 Calendar' }
-            ],
             selectedDept: null,
             loading: false,
             timetableData: timetable_data,
@@ -191,7 +184,8 @@ export default {
             ical: null,
             allGroups: [],
             availableGroups: [],
-            showIgnored: false
+            showIgnored: false,
+            eventsMerged: false
         };
     },
     computed: {},
@@ -207,6 +201,27 @@ export default {
                     this.availableGroups = this.allGroups;
                 });
             });
+        },
+        merge_following: function () {
+            var mergedTimetable = this.timetable;
+            mergedTimetable.forEach((entry, index, arr) => {
+                var nextTime = (parseInt(entry.time.split(':')[0], 10) + 1).toString() + `:${entry.time.split(':')[1]}`;
+                // console.log(nextTime);
+                var similarEvents = arr.filter((event) => event.time == nextTime && event.day == entry.day);
+
+                similarEvents.forEach((simEvent) => {
+                    // console.log('similar event: ', simEvent);
+                    if (entry.name == simEvent.name && this.compareGroups(simEvent.groups, entry.groups)) {
+                        // console.log('match');
+                        entry.duration = (parseInt(simEvent.duration, 10) + 1).toString();
+                        mergedTimetable.splice(
+                            mergedTimetable.findIndex((x) => x.id === simEvent.id),
+                            1
+                        );
+                    }
+                });
+            });
+            this.eventsMerged = true;
         },
         get_courses: function (event) {
             this.selectedDept = this.timetableData.filter((item) => item.code == event.target.value)[0];
@@ -253,7 +268,7 @@ export default {
                     let calEvent = calendar.createEvent({
                         uid: slugify(`${entry.name}-${entry.time}-${entry.day}`),
                         start: start,
-                        end: addHours(start, 1),
+                        end: addHours(start, entry.duration),
                         summary: entry.name,
                         description: `Lecturer: ${entry.lecturer} \nType: ${entry.type}\nLocation: ${location}`,
                         busystatus: 'busy',
@@ -338,7 +353,21 @@ export default {
         },
         // https://masteringjs.io/tutorials/fundamentals/compare-arrays
         arrayEquals: function (a, b) {
+            console.log('comparing arrays');
             return Array.isArray(a) && Array.isArray(b) && a.length === b.length && a.every((val, index) => val === b[index]);
+        },
+        compareGroups: function (arr1, arr2) {
+            var match = false;
+            if (arr1.length == arr2.length) {
+                arr1.forEach((group, idx) => {
+                    if (group == arr2[idx]) {
+                        match = true;
+                    } else {
+                        match = false;
+                    }
+                });
+            }
+            return match;
         }
     }
 };
