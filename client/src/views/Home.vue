@@ -46,7 +46,8 @@
                         </div>
                         <div class="mb-3">
                             <div class="btn-group" role="group">
-                                <button type="button" class="btn btn-info" @click="merge_following()" :disabled="eventsMerged">Merge long classes into a single event</button>
+                                <button type="button" class="btn btn-primary" @click="merge_following()" :disabled="eventsMerged">Merge long classes into a single event</button>
+                                <button type="button" class="btn btn-primary" @click="remove_prog_code()" :disabled="progCodeRemoved">Remove programme code from name</button>
                             </div>
                         </div>
                     </form>
@@ -56,7 +57,7 @@
                     <form>
                         <div class="mb-3">
                             <div class="btn-group" role="group">
-                                <button type="button" class="btn btn-info" @click="generate_ical()">Download .ical</button>
+                                <button type="button" class="btn btn-success" @click="generate_ical()">Download .ical</button>
                             </div>
                         </div>
                     </form>
@@ -185,7 +186,8 @@ export default {
             allGroups: [],
             availableGroups: [],
             showIgnored: false,
-            eventsMerged: false
+            eventsMerged: false,
+            progCodeRemoved: false
         };
     },
     computed: {},
@@ -193,8 +195,10 @@ export default {
         get_timetable: function () {
             this.loading = true;
             this.timetable = [];
-            axios.post('/get-timetable', this.$data.form).then((res) => {
+            axios.post('http://localhost:5000/get-timetable', this.$data.form).then((res) => {
                 this.loading = false;
+                this.progCodeRemoved = false;
+                this.eventsMerged = false;
                 this.timetable = res.data.timetable;
                 this.timetable.forEach((entry) => {
                     this.allGroups = [...new Set([...this.allGroups, ...entry.groups])];
@@ -222,6 +226,14 @@ export default {
                 });
             });
             this.eventsMerged = true;
+        },
+        remove_prog_code: function () {
+            this.timetable.forEach((event) => {
+                var newNameArr = event.name.split(' ');
+                newNameArr.shift(); // Remove the first entry (programme code)
+                event.name = newNameArr.join(' '); // Join the remaining array into a single string
+            });
+            this.progCodeRemoved = true;
         },
         get_courses: function (event) {
             this.selectedDept = this.timetableData.filter((item) => item.code == event.target.value)[0];
