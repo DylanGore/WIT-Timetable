@@ -13,4 +13,4 @@ COPY dist ./dist
 # Run pip
 RUN pip install -r requirements.txt
 
-CMD gunicorn --bind 0.0.0.0:$PORT run:app
+ENTRYPOINT ["gunicorn --bind 0.0.0.0:$PORT run:app"]
