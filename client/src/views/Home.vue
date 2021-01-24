@@ -163,7 +163,8 @@
 import axios from 'axios';
 import timetable_data from '../json/timetable.json';
 import ical from 'ical-generator';
-import { addDays, addHours, parse } from 'date-fns';
+import slugify from 'slugify';
+import { addDays, addHours, parse, setHours, setMinutes, getHours, getMinutes } from 'date-fns';
 
 export default {
     name: 'Home',
@@ -178,7 +179,7 @@ export default {
                 calendarType: 'microsoft'
             },
             calTypes: [
-                // { id: 'google', name: 'Google Calendar' },
+                { id: 'google', name: 'Google Calendar' },
                 { id: 'microsoft', name: 'Outlook/Office 365 Calendar' }
             ],
             selectedDept: null,
@@ -229,7 +230,7 @@ export default {
             }
         },
         generate_ical: function () {
-            var curr = new Date('Jan 25 2021 00:00:00 UTC');
+            var curr = new Date('Jan 25 2021 00:00:00');
             // curr.setHours(0, 0, 0, 0);
             var first = curr.getDate() - curr.getDay(); // First day is the day of the month - the day of the week
             var firstday = addDays(new Date(curr.setDate(first)), 1);
@@ -241,18 +242,6 @@ export default {
                 timezone: 'Europe/Dublin'
             });
 
-            var excludedDays = [];
-
-            // Generate excluded days
-            var timeOffStart = new Date('Mar 29 2021 00:00:00 UTC');
-            var timeOffEnd = new Date('Apr 9 2021 23:59:59 UTC');
-
-            let currDate = timeOffStart;
-            while (currDate < timeOffEnd) {
-                excludedDays.push(currDate);
-                currDate = addDays(currDate, 1);
-            }
-
             this.timetable.forEach((entry) => {
                 if (!entry.ignore) {
                     let start = parse(entry.time, 'HH:mm', addDays(firstday, this.days.indexOf(entry.day.toLowerCase())));
@@ -262,17 +251,40 @@ export default {
                     }
                     console.log(start);
                     let calEvent = calendar.createEvent({
+                        uid: slugify(`${entry.name}-${entry.time}-${entry.day}`),
                         start: start,
                         end: addHours(start, 1),
                         summary: entry.name,
-                        description: `Lecturer: ${entry.lecturer} \nType: ${entry.type}\nLocation: ${entry.location}`,
+                        description: `Lecturer: ${entry.lecturer} \nType: ${entry.type}\nLocation: ${location}`,
                         busystatus: 'busy',
                         location: location
                     });
 
+                    var excludedDays = [];
+
+                    // Exclude Easter
+                    var timeOffStart = new Date('Mar 29 2021 00:00:00');
+                    var timeOffEnd = new Date('Apr 9 2021 23:59:59');
+
+                    var currDate = timeOffStart;
+                    while (currDate < timeOffEnd) {
+                        currDate.setHours(start.getHours() + 1);
+                        currDate.setMinutes(start.getMinutes());
+                        excludedDays.push(currDate);
+                        currDate = addDays(currDate, 1);
+                    }
+
+                    // Exclude St. Patrick's Day
+                    currDate = new Date('Mar 17 2021 00:00:00');
+                    currDate.setHours(start.getHours());
+                    currDate.setMinutes(start.getMinutes());
+                    excludedDays.push(currDate);
+
+                    // Create repeat rule
                     calEvent.repeating({
                         freq: 'WEEKLY',
-                        until: new Date('Apr 28 2021 00:00:00 UTC'),
+                        until: new Date('May 1 2021 00:00:00'),
+                        byDay: [entry.day.toLowerCase().substring(0, 2)],
                         exclude: excludedDays
                     });
                 }
@@ -281,7 +293,8 @@ export default {
             // console.log(calendar.toString());
             // this.ical = calendar.toString();
 
-            this.download_file('wit.ics', calendar.toString());
+            this.download_file('wit.ics', calendar.toString().replaceAll('0Z', '0'));
+            // this.download_file('wit.ics', calendar.toString());
         },
         ignore_event: function (id, ignore = true) {
             let event = this.timetable.find((x) => x.id === id);
