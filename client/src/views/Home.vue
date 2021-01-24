@@ -193,7 +193,7 @@ export default {
         get_timetable: function () {
             this.loading = true;
             this.timetable = [];
-            axios.post('http://10.0.1.1:5000/get-timetable', this.$data.form).then((res) => {
+            axios.post('/get-timetable', this.$data.form).then((res) => {
                 this.loading = false;
                 this.timetable = res.data.timetable;
                 this.timetable.forEach((entry) => {
