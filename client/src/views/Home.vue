@@ -24,13 +24,8 @@
                         </select>
                         <!-- <div id="programmeHelp" class="form-text">Please input the programme code from the official timetable (in brackets after the Programme name)</div> -->
                     </div>
-                    <!-- <div class="mb-3">
-                        <label for="inputProgramme" class="form-label">Programme Code</label>
-                        <input id="inputDepartment" v-model="form.programme" type="text" class="form-control" name="programme" required />
-                        <div id="programmeHelp" class="form-text">Please input the programme code from the official timetable (in brackets after the Programme name)</div>
-                    </div> -->
 
-                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
                         <div class="btn-group mr-2" role="group" aria-label="First group">
                             <button type="submit" class="btn btn-primary" :disabled="loading">
                                 <span v-if="!loading">Get Timetable</span>
@@ -40,70 +35,64 @@
                                 </span>
                             </button>
                         </div>
-
-                        <div class="btn-group" role="group" aria-label="Third group">
-                            <button v-if="timetable.length > 0" class="btn btn-info" role="button" @click="generate_ical()">Generate ICS</button>
-                        </div>
                     </div>
                 </form>
-                <form v-if="timetable.length > 0">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <label for="inputAddAvailableGroup" class="form-label">Available groups</label>
-                            <select id="inputAddAvailableGroup" v-model="groupForm.availableAdd" class="form-select" size="4" aria-label="Available groups">
-                                <option v-for="group in availableGroups" :key="group" :value="group">
-                                    {{ group }}
+                <div v-if="timetable.length > 0" class="col-sm-12">
+                    <h3>Display Options</h3>
+                    <form v-if="timetable.length > 0">
+                        <div class="form-check form-switch mb-3">
+                            <input id="switchIgnored" v-model="showIgnored" class="form-check-input" type="checkbox" />
+                            <label class="form-check-label" for="switchIgnored">Show ignored events</label>
+                        </div>
+                    </form>
+                </div>
+                <div v-if="timetable.length > 0" class="col-sm-12">
+                    <h3>Export Options</h3>
+                    <form>
+                        <div class="mb-3">
+                            <label for="inputCalendarType" class="form-label">Calendar Type</label>
+                            <select id="inputCalendarType" v-model="optionsForm.calendarType" class="form-select" aria-label="Calendar type">
+                                <option v-for="calType in calTypes" :key="calType.id" :value="calType.id">
+                                    {{ calType.name }}
                                 </option>
                             </select>
-                            <br />
-                            <button class="btn btn-info btn-sm" role="button" @click.prevent="add_wanted_group()">Add Selected Group</button>
+                            <!-- <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" v-model="optionsForm.removeProgrammeCode" id="switchRemoveProgCode" @click="update_prog_code()" />
+                            <label class="form-check-label" for="switchRemoveProgCode">Remove Programme Code</label>
+                        </div> -->
                         </div>
-                        <div class="col-sm-6">
-                            <label for="inputAddGroup" class="form-label">Wanted groups</label>
-                            <select id="inputAddGroup" v-model="groupForm.availableRemove" class="form-select" size="4" aria-label="Wanted groups">
-                                <option v-for="group in groupFilters.add" :key="group" :value="group">
-                                    {{ group }}
-                                </option>
-                            </select>
-                            <br />
-                            <button class="btn btn-danger btn-sm" role="button" @click.prevent="remove_wanted_group()">Remove Selected Group</button>
+                        <div class="mb-3">
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-info" @click="generate_ical()">Download .ical</button>
+                            </div>
                         </div>
-                    </div>
-                    <!-- <div class="mb-3">
-                        <label for="inputRemoveGroup" class="form-label">Unwanted groups</label>
-                        <select id="inputRemoveGroup" v-model="groupForm.remove" class="form-select" aria-label="Unwanted groups">
-                            <option v-for="group in availableGroups" :key="group" :value="group">
-                                {{ group }}
-                            </option>
-                        </select>
-                        <br />
-                        <button class="btn btn-info" role="button" @click="add_unwanted_group()">Add Group</button>
-                    </div> -->
-                </form>
+                    </form>
+                </div>
                 <hr />
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12">
                 <section v-if="timetable.length > 0" id="timetable-tabs">
-                    <nav>
-                        <div id="nav-tab" class="nav nav-tabs" role="tablist">
-                            <a
-                                v-for="day in days"
-                                :id="`nav-${day}-tab`"
-                                :key="day"
-                                :class="tab_classes(day)"
-                                data-toggle="tab"
-                                :href="`#nav-${day}`"
-                                role="tab"
-                                :aria-controls="`nav-${day}`"
-                                aria-selected="true"
-                            >
-                                {{ day.charAt(0).toUpperCase() + day.slice(1) }}
-                            </a>
-                        </div>
-                    </nav>
                     <div id="nav-tabContent" class="tab-content">
+                        <nav>
+                            <div id="nav-tab" class="nav nav-tabs" role="tablist">
+                                <a
+                                    v-for="day in days"
+                                    :id="`nav-${day}-tab`"
+                                    :key="day"
+                                    :class="tab_classes(day)"
+                                    data-bs-toggle="tab"
+                                    :href="`#nav-${day}`"
+                                    role="tab"
+                                    :aria-controls="`nav-${day}`"
+                                    aria-selected="true"
+                                >
+                                    {{ day.charAt(0).toUpperCase() + day.slice(1) }}
+                                </a>
+                            </div>
+                        </nav>
+
                         <div v-for="day in days" :id="`nav-${day}`" :key="day" :class="content_classes(day)" role="tabpanel" :aria-labelledby="`nav-${day}-tab`">
                             <table class="table">
                                 <thead>
@@ -114,7 +103,7 @@
                                         <th scope="col">Type</th>
                                         <th scope="col">Lecturer</th>
                                         <th scope="col">Room</th>
-                                        <th scope="col">Ignored</th>
+                                        <th scope="col">Options</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -128,7 +117,8 @@
                                             'oncampus-practical': event.type.includes('P - On Campus'),
                                             'oncampus-tutorial': event.type.includes('T - On Campus'),
                                             'online-tutorial': event.type.includes('OT - Online'),
-                                            'ignore-class': event.ignore
+                                            'ignore-class': event.ignore && !showIgnored,
+                                            'ignore-class-visible': event.ignore && showIgnored
                                         }"
                                     >
                                         <td>{{ event.time }}</td>
@@ -145,7 +135,19 @@
                                         </td>
                                         <td>{{ event.lecturer }}</td>
                                         <td>{{ event.room }}</td>
-                                        <td>{{ event.ignore }}</td>
+                                        <td>
+                                            <div class="btn-group" role="group">
+                                                <!-- prettier-ignore -->
+                                                <button id="btnGroupHideEvent" type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    Hide
+                                                </button>
+                                                <ul class="dropdown-menu" aria-labelledby="btnGroupHideEvent">
+                                                    <li><a class="dropdown-item" @click="ignore_event(event.id)">Hide event</a></li>
+                                                    <li><a class="dropdown-item" @click="ignore_event_group(event.id)">Hide all events with matching groups</a></li>
+                                                    <li><a class="dropdown-item" @click="ignore_event_name(event.id)">Hide all events with this name</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -171,14 +173,14 @@ export default {
                 department: null,
                 programme: null
             },
-            groupForm: {
-                availableAdd: [],
-                availableRemove: []
+            optionsForm: {
+                removeProgrammeCode: true,
+                calendarType: 'microsoft'
             },
-            groupFilters: {
-                add: [],
-                remove: []
-            },
+            calTypes: [
+                // { id: 'google', name: 'Google Calendar' },
+                { id: 'microsoft', name: 'Outlook/Office 365 Calendar' }
+            ],
             selectedDept: null,
             loading: false,
             timetableData: timetable_data,
@@ -187,32 +189,11 @@ export default {
             timetable: [],
             ical: null,
             allGroups: [],
-            enabledGroups: null,
-            availableGroups: []
-            // toRemove: [],
+            availableGroups: [],
+            showIgnored: false
         };
     },
-    computed: {
-        filteredTimetable: function () {
-            this.timetable.forEach((entry) => {
-                if (this.groupFilters.add.some((v) => entry.groups.indexOf(v) !== -1)) {
-                    if (entry.id > -1) {
-                        console.log(`Ignoring ${entry.time} ${entry.name}`);
-                        entry.ignore = true;
-                    } else {
-                        console.log(`Un-Ignoring ${entry.time} ${entry.name}`);
-                        entry.ignore = false;
-                    }
-                }
-                // if (this.groupFilters.remove.some((v) => entry.groups.indexOf(v) === -1)) {
-                //     if (entry.id > -1) {
-                //         entry.ignore = true;
-                //     }
-                // }
-            });
-            return this.timetable;
-        }
-    },
+    computed: {},
     methods: {
         get_timetable: function () {
             this.loading = true;
@@ -231,7 +212,7 @@ export default {
             return this.timetableData.filter((item) => item.code == event.target.value);
         },
         day_classes: function (day) {
-            return this.filteredTimetable.filter((event) => event.day === day.charAt(0).toUpperCase() + day.slice(1));
+            return this.timetable.filter((event) => event.day === day.charAt(0).toUpperCase() + day.slice(1));
         },
         tab_classes: function (day) {
             if (this.activeDay === day) {
@@ -247,34 +228,30 @@ export default {
                 return 'tab-pane fade table-responsive';
             }
         },
-        add_wanted_group: function () {
-            this.groupFilters.add.push(this.groupForm.availableAdd);
-            this.availableGroups = this.availableGroups.filter((e) => e !== this.groupForm.availableAdd);
-        },
-        remove_wanted_group: function () {
-            this.timetable.forEach((entry) => {
-                entry.ignore = false;
-            });
-            this.availableGroups = this.allGroups;
-            this.groupFilters.add = [];
-        },
-        add_unwanted_group: function () {
-            this.groupFilters.remove.push(this.groupForm.remove);
-            this.availableGroups = this.availableGroups.filter((e) => e !== this.groupForm.remove);
-        },
         generate_ical: function () {
-            var curr = new Date('Sept 28 2020 00:00:00 UTC'); // get current date
+            var curr = new Date('Jan 25 2021 00:00:00 UTC');
             // curr.setHours(0, 0, 0, 0);
             var first = curr.getDate() - curr.getDay(); // First day is the day of the month - the day of the week
-
             var firstday = addDays(new Date(curr.setDate(first)), 1);
 
             const calendar = ical({
-                domain: 'wit-timetable.apps.dylangore.space',
+                domain: 'wit-timetable.dylangore.ie',
                 prodId: { company: 'Dylan Gore', product: 'wit-timetable' },
                 name: 'WIT Timetable',
                 timezone: 'Europe/Dublin'
             });
+
+            var excludedDays = [];
+
+            // Generate excluded days
+            var timeOffStart = new Date('Mar 29 2021 00:00:00 UTC');
+            var timeOffEnd = new Date('Apr 9 2021 23:59:59 UTC');
+
+            let currDate = timeOffStart;
+            while (currDate < timeOffEnd) {
+                excludedDays.push(currDate);
+                currDate = addDays(currDate, 1);
+            }
 
             this.timetable.forEach((entry) => {
                 if (!entry.ignore) {
@@ -288,14 +265,15 @@ export default {
                         start: start,
                         end: addHours(start, 1),
                         summary: entry.name,
-                        description: `Lecturer: ${entry.lecturer} \nType: ${entry.type}`,
-                        location: location,
-                        busystatus: 'busy'
+                        description: `Lecturer: ${entry.lecturer} \nType: ${entry.type}\nLocation: ${entry.location}`,
+                        busystatus: 'busy',
+                        location: location
                     });
 
                     calEvent.repeating({
                         freq: 'WEEKLY',
-                        until: new Date('Dec 19 2020 00:00:00 UTC')
+                        until: new Date('Apr 28 2021 00:00:00 UTC'),
+                        exclude: excludedDays
                     });
                 }
             });
@@ -304,6 +282,34 @@ export default {
             // this.ical = calendar.toString();
 
             this.download_file('wit.ics', calendar.toString());
+        },
+        ignore_event: function (id, ignore = true) {
+            let event = this.timetable.find((x) => x.id === id);
+            let eventIdx = this.timetable.findIndex((x) => x.id === id);
+
+            event.ignore = ignore;
+
+            this.timetable[eventIdx] = event;
+        },
+        ignore_event_group: function (id, ignore = true) {
+            let event = this.timetable.find((x) => x.id === id);
+
+            this.timetable.forEach((foundEvent) => {
+                if (this.arrayEquals(foundEvent.groups, event.groups)) {
+                    foundEvent.ignore = ignore;
+                    console.log('Ignoring: ' + event.time + event.name);
+                }
+            });
+        },
+        ignore_event_name: function (id, ignore = true) {
+            let event = this.timetable.find((x) => x.id === id);
+
+            this.timetable.forEach((foundEvent) => {
+                if (foundEvent.name == event.name) {
+                    foundEvent.ignore = ignore;
+                    console.log('Ignoring: ' + event.time + event.name);
+                }
+            });
         },
         download_file: function (filename, text) {
             var element = document.createElement('a');
@@ -316,6 +322,10 @@ export default {
             element.click();
 
             document.body.removeChild(element);
+        },
+        // https://masteringjs.io/tutorials/fundamentals/compare-arrays
+        arrayEquals: function (a, b) {
+            return Array.isArray(a) && Array.isArray(b) && a.length === b.length && a.every((val, index) => val === b[index]);
         }
     }
 };
@@ -323,8 +333,11 @@ export default {
 
 <style lang="css">
 .ignore-class {
-    text-decoration: line-through;
     display: none;
+}
+
+.ignore-class-visible {
+    text-decoration: line-through;
 }
 
 .oncampus-lecture {

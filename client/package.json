@@ -10,9 +10,8 @@
         "axios": "^0.21.1",
         "bootstrap": "^5.0.0-beta1",
         "date-fns": "^2.16.1",
-        "ical-generator": "^1.15.4",
+        "ical-generator": "^1.15.0",
         "vue": "^3.0.5",
-        "vue-axios": "^3.2.2",
         "vue-cal": "^4.2.0",
         "vue-router": "^4.0.3"
     },
