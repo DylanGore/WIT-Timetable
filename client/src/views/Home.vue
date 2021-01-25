@@ -113,6 +113,7 @@
                                             'oncampus-practical': event.type.includes('P - On Campus'),
                                             'oncampus-tutorial': event.type.includes('T - On Campus'),
                                             'online-tutorial': event.type.includes('OT - Online'),
+                                            'online-s': event.type.includes('OS - Online'),
                                             'ignore-class': event.ignore && !showIgnored,
                                             'ignore-class-visible': event.ignore && showIgnored
                                         }"
@@ -399,6 +400,14 @@ export default {
 }
 .online-lecture {
     background: aqua;
+}
+
+.online-s {
+    background: green;
+}
+
+.online-s > .type-col {
+    background: #71c7ec;
 }
 
 .online-lecture > .type-col {
