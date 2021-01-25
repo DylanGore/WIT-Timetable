@@ -215,7 +215,7 @@ export default {
 
                 similarEvents.forEach((simEvent) => {
                     // console.log('similar event: ', simEvent);
-                    if (entry.name == simEvent.name && this.compareGroups(simEvent.groups, entry.groups)) {
+                    if (entry.name == simEvent.name && this.compareGroups(simEvent.groups, entry.groups) && entry.type == simEvent.type && entry.room == simEvent.room) {
                         // console.log('match');
                         entry.duration = (parseInt(simEvent.duration, 10) + 1).toString();
                         mergedTimetable.splice(
