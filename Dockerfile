@@ -1,4 +1,12 @@
-FROM joyzoursky/python-chromedriver:3.8-alpine3.10
+FROM python:3.9-alpine3.12
+
+# Add default apk repositories for alpine 3.12
+RUN echo "http://dl-4.alpinelinux.org/alpine/v3.12/main" >> /etc/apk/repositories && \
+    echo "http://dl-4.alpinelinux.org/alpine/v3.12/community" >> /etc/apk/repositories
+
+# Update the repository and install chromedriver
+RUN apk update
+RUN apk add chromium chromium-chromedriver
 
 WORKDIR /app
 
