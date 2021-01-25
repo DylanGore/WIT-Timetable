@@ -7,7 +7,6 @@ ENV PORT=5000
 # Copy source files to container
 COPY *.py ./
 COPY requirements.txt .
-COPY timetable.json .
 COPY dist ./dist
 
 # Run pip
