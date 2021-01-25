@@ -195,7 +195,7 @@ export default {
         get_timetable: function () {
             this.loading = true;
             this.timetable = [];
-            axios.post('http://localhost:5000/get-timetable', this.$data.form).then((res) => {
+            axios.post('/get-timetable', this.$data.form).then((res) => {
                 this.loading = false;
                 this.progCodeRemoved = false;
                 this.eventsMerged = false;
