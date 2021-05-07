@@ -8,8 +8,8 @@ export default ({ command, mode }) => {
     if (command === 'build') {
         return {
             plugins: [vue()],
+            base: '/dist/',
             build: {
-                base: '/dist/',
                 outDir: '../dist',
                 emptyOutDir: true
             }
